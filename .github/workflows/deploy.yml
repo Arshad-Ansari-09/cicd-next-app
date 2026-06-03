@@ -13,5 +13,5 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - run: docker build . -t afreenafreen/cicd-next-app
-    - run: echo "${{secrets.DOCKERHUBPASS}}" | docker login -u ${{secrets.DOCKERHUBUSERNAME}} --password-stdin
+    - run: echo "${{secrets.DOCKERHUB_PASSWORD}}" | docker login -u ${{secrets.DOCKERHUB_USERNAME}} --password-stdin
     - run: docker push afreenafreen/cicd-next-app:latest
